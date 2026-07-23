@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="absolute inset-0 bg-black/20 backdrop-blur-md border-b border-white/10" />
 
       <div className="relative z-10 text-xl font-bold tracking-widest text-white cursor-pointer" data-hover>
-        FBA.
+        FBA.online
       </div>
 
       <div className="relative z-10 hidden md:flex items-center gap-8">
