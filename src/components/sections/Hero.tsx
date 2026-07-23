@@ -85,7 +85,7 @@ const LiquidDistortionMaterial = shaderMaterial(
 extend({ LiquidDistortionMaterial });
 
 function ProfileImageMesh() {
-  const materialRef = useRef<any>();
+  const materialRef = useRef<any>(null);
   const [hovered, setHover] = useState(false);
   // Start mouse at center so it doesn't snap abruptly
   const [mousePos, setMousePos] = useState(new THREE.Vector2(0.5, 0.5));
