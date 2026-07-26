@@ -139,7 +139,7 @@ function ProfileImageMesh() {
       materialRef.current.uMouse.copy(mousePos);
       materialRef.current.uResolution.set(viewport.width, viewport.height);
       if (texture.image) {
-        materialRef.current.uImageResolution.set(texture.image.width, texture.image.height);
+        materialRef.current.uImageResolution.set((texture.image as any).width, (texture.image as any).height);
       }
     }
   });
@@ -265,7 +265,7 @@ export default function Hero() {
               View Projects
             </MagneticButton>
             
-            <MagneticButton href="/Fahad Bin Ansari-Resumeorg.pdf" download={true} className="!bg-transparent !border-white/20 hover:!bg-white/10">
+            <MagneticButton href="/Fahad Bin Ansari-Resumeorg.pdf" target="_blank" className="!bg-transparent !border-white/20 hover:!bg-white/10">
               Download Resume
             </MagneticButton>
           </motion.div>

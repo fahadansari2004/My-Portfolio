@@ -9,9 +9,10 @@ interface MagneticButtonProps {
   className?: string;
   onClick?: () => void;
   download?: boolean;
+  target?: string;
 }
 
-export default function MagneticButton({ children, href, className = "", onClick, download }: MagneticButtonProps) {
+export default function MagneticButton({ children, href, className = "", onClick, download, target }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -62,7 +63,7 @@ export default function MagneticButton({ children, href, className = "", onClick
 
   if (href) {
     return (
-      <a href={href} onClick={onClick} download={download ? true : undefined} className="inline-block relative z-30" data-hover>
+      <a href={href} target={target} onClick={onClick} download={download ? true : undefined} className="inline-block relative z-30" data-hover>
         {content}
       </a>
     );
