@@ -191,14 +191,14 @@ export default function Hero() {
   const scaleImage = useTransform(scrollY, [0, 500], [1, 1.1]);
 
   return (
-    <section id="home" className="relative w-full h-[100vh] flex items-center overflow-hidden">
+    <section id="home" className="relative w-full h-[100svh] flex items-center overflow-hidden">
       
       {/* Absolute Full Bleed 3D Canvas Background */}
       <motion.div 
         style={{ scale: scaleImage }}
         className="absolute inset-0 z-0 flex justify-end items-center pointer-events-auto"
       >
-        <div className="w-full md:w-[60%] h-[70vh] md:h-[90vh] relative right-[-5%]">
+        <div className="w-full md:w-[60%] h-[70svh] md:h-[90svh] relative right-[-5%]">
            <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]}>
              <ambientLight intensity={1} />
              <Center>
