@@ -4,6 +4,7 @@ import { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame, extend, useThree } from "@react-three/fiber";
 import { useTexture, Center } from "@react-three/drei";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import * as THREE from "three";
 import { shaderMaterial } from "@react-three/drei";
 import MagneticButton from "../MagneticButton";
@@ -192,6 +193,16 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative w-full h-[100svh] flex items-center overflow-hidden">
+      
+      {/* Hidden image for Google Images SEO (WebGL is invisible to bots) */}
+      <Image 
+        src="/mypic.png" 
+        alt="Fahad Bin Ansari - Software Engineer, Full Stack Developer, and AI Developer" 
+        width={1200} 
+        height={800} 
+        className="sr-only" 
+        priority 
+      />
       
       {/* Absolute Full Bleed 3D Canvas Background */}
       <motion.div 

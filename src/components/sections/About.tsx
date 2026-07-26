@@ -26,13 +26,13 @@ export default function About() {
             <div className="relative glass-card p-12 rounded-3xl border border-white/10 overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                Behind the Code
+                About Fahad Bin Ansari
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Versatile Full-Stack Developer proficient in both front-end and back-end development, with hands-on experience using Python (Django) and PHP to build scalable web applications.
+                I am Fahad Bin Ansari, a versatile Software Engineer and Full-Stack Developer proficient in both modern front-end architectures and robust back-end systems. My expertise spans Python (Django), Node.js, and React to build highly scalable and optimized web applications.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Adept at designing responsive UI/UX interfaces and managing relational and NoSQL databases like MySQL and MongoDB. Proven ability to handle complex problem-solving in fast-paced environments, underscored by recognized excellence in innovation hackathons.
+                As a passionate AI Developer, I excel in solving complex problems and integrating artificial intelligence into functional products. Whether designing premium UI/UX interfaces or managing relational and NoSQL databases like MySQL and MongoDB, I deliver comprehensive solutions recognized by excellence in innovation hackathons.
               </p>
             </div>
           </motion.div>
