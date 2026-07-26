@@ -13,9 +13,16 @@ export default function CustomCursor() {
   const innerCursorX = useMotionValue(-100);
   const innerCursorY = useMotionValue(-100);
 
+  const trailX = useMotionValue(-100);
+  const trailY = useMotionValue(-100);
+
   const springConfig = { damping: 25, stiffness: 300, mass: 0.5 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
+
+  const trailConfig = { damping: 40, stiffness: 200, mass: 1 };
+  const trailXSpring = useSpring(trailX, trailConfig);
+  const trailYSpring = useSpring(trailY, trailConfig);
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -23,6 +30,8 @@ export default function CustomCursor() {
       cursorY.set(e.clientY - 16);
       innerCursorX.set(e.clientX - 4);
       innerCursorY.set(e.clientY - 4);
+      trailX.set(e.clientX - 32);
+      trailY.set(e.clientY - 32);
     };
 
     const handleMouseEnter = () => setIsVisible(true);
@@ -48,16 +57,25 @@ export default function CustomCursor() {
       window.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("mouseover", handleMouseOver);
     };
-  }, [cursorX, cursorY, innerCursorX, innerCursorY]);
+  }, [cursorX, cursorY, innerCursorX, innerCursorY, trailX, trailY]);
 
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-16 h-16 rounded-full bg-white/5 blur-xl pointer-events-none z-[9998]"
+        style={{
+          x: trailXSpring,
+          y: trailYSpring,
+          scale: isHovered ? 1.5 : 1,
+          opacity: isVisible ? 1 : 0,
+        }}
+      />
+      <motion.div
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 bg-white/5 backdrop-blur-[2px] pointer-events-none z-[9999]"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
-          scale: isHovered ? 1.5 : 1,
+          scale: isHovered ? 1.8 : 1,
           opacity: isVisible ? 1 : 0,
         }}
       />
@@ -66,7 +84,7 @@ export default function CustomCursor() {
         style={{
           x: innerCursorX,
           y: innerCursorY,
-          opacity: isVisible ? 1 : 0,
+          opacity: isVisible ? (isHovered ? 0 : 1) : 0,
         }}
       />
     </>
