@@ -2,25 +2,38 @@
 
 import { motion } from "framer-motion";
 
-const experiences = [
+interface ExperienceItem {
+  company: string;
+  role: string;
+  period: string;
+  track: string;
+  skills: string[];
+  description: string[];
+}
+
+const experiences: ExperienceItem[] = [
   {
-    company: "NeST Digital",
+    company: "NeST Digital Pvt Ltd",
     role: "Web Developer Intern",
     period: "May 2026 – July 2026",
+    track: "Full Stack Web Development & UI/UX",
+    skills: ["Angular", "TypeScript", "Modern CSS", "UI/UX", "Backend Optimization", "Database Management"],
     description: [
-      "Collaborated on UI/UX and full-stack development of web solutions.",
-      "Implemented responsive front-end components using Angular.",
-      "Assisted in optimizing backend workflows and database management tasks."
+      "Developed responsive front-end modules in Angular, replacing static components with dynamic, reusable UI elements.",
+      "Collaborated with senior developers and mentors on full-stack feature delivery, translating UI/UX wireframes into functional modules.",
+      "Supported backend workflow optimization and database administration for live client web applications."
     ]
   },
   {
     company: "Illford Digital",
     role: "Web Developer Intern",
     period: "June 2025 – July 2025",
+    track: "UI/UX & Web Development",
+    skills: ["JavaScript", "HTML5", "CSS3", "Relational Databases", "UI/UX Redesign", "Query Tuning"],
     description: [
-      "Collaborated on UI/UX redesigns and full-stack development of web solutions.",
-      "Implemented responsive front-end components using JavaScript and modern CSS.",
-      "Assisted in optimizing backend workflows and database management tasks."
+      "Constructed responsive client-facing web pages utilizing JavaScript, HTML5, and modern CSS paradigms across client engagements.",
+      "Contributed to UI/UX redesign workflows, significantly improving layout consistency, visual hierarchy, and cross-device usability.",
+      "Assisted with backend workflow optimization, relational database query tuning, and administrative tasks."
     ]
   }
 ];
@@ -61,9 +74,10 @@ export default function Experience() {
                 <div className={`glass-card p-8 rounded-3xl relative group ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                   <div className="text-white/50 text-sm font-mono tracking-widest mb-2">{exp.period}</div>
                   <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
-                  <h4 className="text-lg text-gray-400 mb-6">{exp.company}</h4>
+                  <h4 className="text-lg text-emerald-400 font-medium mb-1">{exp.company}</h4>
+                  <div className="text-xs uppercase tracking-wider text-gray-400 mb-6 font-mono">{exp.track}</div>
                   
-                  <ul className={`space-y-3 text-gray-300 text-sm md:text-base ${index % 2 === 0 ? 'md:pl-0' : 'md:pr-0 inline-block text-left'}`}>
+                  <ul className={`space-y-3 text-gray-300 text-sm md:text-base mb-6 ${index % 2 === 0 ? 'md:pl-0' : 'md:pr-0 inline-block text-left'}`}>
                     {exp.description.map((item, i) => (
                       <li key={i} className="flex gap-3">
                         <span className="text-white/40 mt-1">•</span>
@@ -71,6 +85,14 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+
+                  <div className={`flex flex-wrap gap-2 pt-4 border-t border-white/10 ${index % 2 === 0 ? 'justify-start' : 'md:justify-end justify-start'}`}>
+                    {exp.skills.map((skill) => (
+                      <span key={skill} className="px-2.5 py-1 text-xs border border-white/10 rounded-full text-gray-300 bg-white/5">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>

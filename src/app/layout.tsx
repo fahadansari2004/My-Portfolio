@@ -9,22 +9,21 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   metadataBase: new URL("https://fahadansari.online"),
   title: {
-    default: "Fahad Bin Ansari | Software Engineer & AI Developer",
+    default: "Fahad Bin Ansari | Full Stack Web Developer & Software Engineer",
     template: "%s | Fahad Bin Ansari",
   },
-  description: "Official portfolio of Fahad Bin Ansari, a Full Stack Developer and AI Developer specializing in modern web applications and scalable solutions.",
+  description: "Official portfolio of Fahad Bin Ansari, a Full Stack Web Developer proficient in Python (Django), PHP, Angular, JavaScript, and modern database architectures.",
   keywords: [
     "Fahad Bin Ansari",
     "Fahad Ansari",
     "Fahad Bin Ansari Portfolio",
-    "Fahad's Portfolio",
-    "Fahad Portfolio",
-    "Full Stack Developer Fahad Bin Ansari",
-    "AI Developer Fahad Bin Ansari",
+    "Full Stack Web Developer",
+    "Python Django Developer",
+    "Angular Developer",
+    "PHP Developer",
     "Software Engineer Fahad Bin Ansari",
-    "Web Developer",
-    "React",
-    "Next.js",
+    "Saintgits College of Engineering",
+    "Web Developer Kerala",
   ],
   authors: [{ name: "Fahad Bin Ansari" }],
   creator: "Fahad Bin Ansari",
@@ -32,22 +31,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://fahadansari.online",
-    title: "Fahad Bin Ansari | Software Engineer",
-    description: "Official portfolio of Fahad Bin Ansari, a Full Stack Developer and AI Developer.",
+    title: "Fahad Bin Ansari | Full Stack Web Developer",
+    description: "Official portfolio of Fahad Bin Ansari, Full Stack Web Developer and Software Engineer.",
     siteName: "Fahad Bin Ansari Portfolio",
     images: [
       {
         url: "/mypic.png",
         width: 1200,
         height: 630,
-        alt: "Fahad Bin Ansari - Software Engineer",
+        alt: "Fahad Bin Ansari - Full Stack Web Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fahad Bin Ansari | Software Engineer",
-    description: "Official portfolio of Fahad Bin Ansari, a Full Stack Developer and AI Developer.",
+    title: "Fahad Bin Ansari | Full Stack Web Developer",
+    description: "Official portfolio of Fahad Bin Ansari, Full Stack Web Developer and Software Engineer.",
     images: ["/mypic.png"],
   },
   alternates: {
@@ -64,10 +63,29 @@ const jsonLd = {
       "name": "Fahad Bin Ansari",
       "url": "https://fahadansari.online",
       "image": "https://fahadansari.online/mypic.png",
-      "jobTitle": ["Software Engineer", "Full Stack Developer", "AI Developer"],
+      "email": "mailto:ansaryfahad950@gmail.com",
+      "telephone": "+917591920678",
+      "jobTitle": ["Full Stack Web Developer", "Software Engineer", "AI Developer"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kangazha, Kottayam",
+        "addressRegion": "Kerala",
+        "postalCode": "686541",
+        "addressCountry": "IN"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Saintgits College of Engineering, Kottayam"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "MES College, Erumely"
+        }
+      ],
       "sameAs": [
         "https://github.com/fahadansari2004",
-        "https://www.linkedin.com/in/fahad-bin-ansari/"
+        "https://linkedin.com/in/fahad-bin-ansari"
       ]
     },
     {

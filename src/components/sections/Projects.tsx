@@ -3,38 +3,51 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
-const projects = [
+interface Project {
+  title: string;
+  badge?: string;
+  description: string;
+  tech: string[];
+  link: string;
+  github: string;
+}
+
+const projects: Project[] = [
   {
     title: "Event Management System",
-    description: "A full-scale web platform for a professional event management company, featuring services for weddings, corporate events, and catering with a modern design focused on high-end logistics and presentation.",
-    tech: ["Html", "CSS", "JavaScript", "Bootstrap", "Supabase"],
+    badge: "Live Project — 2026",
+    description: "Engineered a comprehensive, full-stack live portal for an international event management company covering corporate events, weddings, and catering logistics with dynamic booking and inquiry flows for customer interaction.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Supabase"],
     link: "https://storiedinternational.in",
-    github: "#"
+    github: "https://github.com/fahadansari2004"
   },
   {
     title: "Travel Management System",
-    description: "Developed an integrated solution for hotel and bus bookings, enhancing customer experience with streamlined reservation workflows and real-time availability tracking.",
-    tech: ["PHP", "JavaScript", "MySQL"],
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Student Management System",
-    description: "Created a digital platform to manage student data, academic records, and administrative workflows, improving data accessibility and reporting.",
-    tech: ["Python", "Django", "SQLite"],
-    link: "#",
-    github: "#"
+    badge: "Live Project — 2026",
+    description: "Developed an integrated booking solution enabling customers to reserve tour packages and flights. Built administrative control panels to track real-time seat availability and streamline reservation workflows.",
+    tech: ["PHP", "JavaScript", "MySQL", "Bootstrap"],
+    link: "https://travelpartnerktm.in",
+    github: "https://github.com/fahadansari2004"
   },
   {
     title: "Restaurant Management System",
-    description: "Created a digital platform to manage Food items and to order them.",
-    tech: ["Angular", "Rest Api"], // Inferred/Placeholder tech since resume didn't specify
+    badge: "2026",
+    description: "Built a responsive web application to organize digital menus, monitor inventory items, and process customer food orders end-to-end with seamless order management.",
+    tech: ["Angular", "TypeScript", "REST APIs", "CSS3"],
     link: "https://final-task-nest.vercel.app/",
-    github: "#"
+    github: "https://github.com/fahadansari2004"
+  },
+  {
+    title: "Student Management System",
+    badge: "2026",
+    description: "Created a digital platform to manage student data, academic records, and administrative workflows, improving institutional data accessibility, security, and reporting.",
+    tech: ["Python", "Django", "SQLite", "Bootstrap"],
+    link: "https://github.com/fahadansari2004",
+    github: "https://github.com/fahadansari2004"
   }
 ];
 
-function ProjectCard({ project, index }: { project: any, index: number }) {
+function ProjectCard({ project, index }: { project: Project, index: number }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -82,6 +95,14 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
       />
 
       <div className="flex-1 relative z-10">
+        {project.badge && (
+          <div className="mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              {project.badge}
+            </span>
+          </div>
+        )}
         <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
         <p className="text-gray-400 mb-6 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">{project.description}</p>
 

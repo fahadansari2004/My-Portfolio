@@ -17,7 +17,7 @@ export default function Navbar() {
     }
   });
 
-  const navItems = ["Home", "About", "Skills", "Projects", "Experience", "Contact"];
+  const navItems = ["Home", "About", "Skills", "Projects", "Experience", "Education", "Contact"];
 
   return (
     <motion.nav
