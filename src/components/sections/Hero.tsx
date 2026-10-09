@@ -276,7 +276,7 @@ export default function Hero() {
               View Projects
             </MagneticButton>
             
-            <MagneticButton href="/Fahad Bin Ansari-Resumeorg.pdf" target="_blank" className="!bg-transparent !border-white/20 hover:!bg-white/10">
+            <MagneticButton href="/Fahad Bin Ansari-Resumeorg.pdf" target="_blank" download className="!bg-transparent !border-white/20 hover:!bg-white/10">
               Download Resume
             </MagneticButton>
           </motion.div>
