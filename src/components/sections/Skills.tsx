@@ -20,6 +20,9 @@ const skillsList: SkillItem[] = [
   { name: "CSS3", category: "Languages" },
 
   // Frameworks & UI
+  { name: "FastAPI", category: "Frameworks & UI" },
+  { name: "LangGraph", category: "Frameworks & UI" },
+  { name: "LangChain", category: "Frameworks & UI" },
   { name: "Django", category: "Frameworks & UI" },
   { name: "Angular", category: "Frameworks & UI" },
   { name: "React", category: "Frameworks & UI" },
@@ -34,6 +37,8 @@ const skillsList: SkillItem[] = [
   { name: "SQLite", category: "Databases" },
 
   // Tools & Practices
+  { name: "Docker", category: "Tools & Practices" },
+  { name: "Multi-Agent Systems", category: "Tools & Practices" },
   { name: "RESTful APIs", category: "Tools & Practices" },
   { name: "Git & GitHub", category: "Tools & Practices" },
   { name: "UI/UX Design", category: "Tools & Practices" },

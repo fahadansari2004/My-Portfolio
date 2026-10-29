@@ -29,10 +29,10 @@ export default function About() {
                 About Fahad Bin Ansari
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I am Fahad Bin Ansari, a Full Stack Web Developer and Software Engineer with hands-on experience developing responsive web applications and backend systems using Python (Django), PHP, JavaScript, Angular, HTML5, and CSS.
+                I am Fahad Bin Ansari, a Full Stack Web Developer and Software Engineer with hands-on experience developing responsive web applications, autonomous multi-agent AI systems, and backend platforms using Python (FastAPI, Django), LangGraph, PHP, JavaScript, Angular, HTML5, and CSS.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                I specialize in architecting scalable database structures (MySQL, MongoDB, SQLite, Supabase), engineering RESTful APIs, and crafting clean, accessible UI/UX interfaces. I have delivered production-grade platforms for event logistics, travel booking, and administrative management.
+                I specialize in architecting scalable database structures (MySQL, MongoDB, SQLite, Supabase), engineering RESTful APIs and agentic workflows, and crafting clean, accessible UI/UX interfaces. I have delivered production-grade platforms for event logistics, travel booking, multi-agent automation, and administrative management.
               </p>
               <p className="text-gray-400 text-base leading-relaxed">
                 Ranked among the <span className="text-white font-semibold">Top 75 teams out of 1,500+</span> in the AICTE South India Idea Pitching Competition, with active participation in premier hackathons including the NASA International Space Apps Challenge and Smart India Hackathon.
@@ -63,9 +63,9 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="glass p-8 rounded-3xl relative overflow-hidden group"
             >
-              <h3 className="text-6xl font-bold text-white mb-2">10+</h3>
-              <p className="text-gray-300 font-medium">Projects & Systems Delivered</p>
-              <p className="text-gray-500 uppercase tracking-widest text-xs mt-1">Full-Stack & Client Live Portals</p>
+              <h3 className="text-6xl font-bold text-white mb-2">12+</h3>
+              <p className="text-gray-300 font-medium">Projects & AI Systems Delivered</p>
+              <p className="text-gray-500 uppercase tracking-widest text-xs mt-1">Full-Stack, AI Agents & Live Portals</p>
             </motion.div>
 
             <motion.div 
